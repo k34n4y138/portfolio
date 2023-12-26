@@ -32,25 +32,13 @@
       position: absolute
       top: 3px
       left: 10px
-      color: #555
       font-size: 14px
       font-weight: 300
 
-  li:nth-child(1)::before
-    content: "01"
 
-  li:nth-child(2)::before
-    content: "02"
-
-  li:nth-child(3)::before
-    content: "03"
-
-  li:nth-child(4)::before
-    content: "04"
-
-  li:nth-child(5)::before
-    content: "05"
-
+  @for $i from 1 through 6
+    li:nth-child(#{$i})::before
+      content: "0#{$i}"
   li.is-active
     color: $highlight
     transition: color .4s ease-in-out

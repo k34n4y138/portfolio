@@ -1,0 +1,13 @@
+{
+    "name": "portfolio",
+    "version": "1.0.0",
+    "description": "My Portfolio",
+    "scripts": {
+        "sass": "sass --watch assets/css/main.sass assets/css/main.css",
+        "start": "sass --watch assets/css/main.sass assets/css/main.css & lite-server"
+    },
+    "devDependencies": {
+        "sass": "^1.43.4",
+        "lite-server": "^2.7.2"
+    }
+}
