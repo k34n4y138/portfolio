@@ -40,12 +40,49 @@
           <ul class="l-main-content main-content">
             <li class="l-section section section--is-active">
               <div class="hero">
-                <div>
-                  Hero
+                <div class="hero--content">
+                  <h1>Zakaria Moumen</h1>
+                  <div class="text-carousel-wrapper">
+                    <h4 class="carousel-text carousel-text--active">Backend Developper</h4>
+                    <h4 class="carousel-text">Python Programmer</h4>
+                    <h4 class="carousel-text">Django Developper</h4>
+                    <h4 class="carousel-text">Java Programmer</h4>
+                    <h4 class="carousel-text">Springboot Developper</h4>
+                    <h4 class="carousel-text">Rust Programmer</h4>
+                    <h4 class="carousel-text">C++ Programmer</h4>
+                    <h4 class="carousel-text">Cloud Practitioner</h4>
+                    <h4 class="carousel-text">Linux Administrator</h4>
+                    <h4 class="carousel-text">Deployment Specialist</h4>
+                    <h4 class="carousel-text">kubernetes Administrator</h4>
+                    <script>
+                      var carouselTexts = document.getElementsByClassName("carousel-text");
+                      var carouselTextsLength = carouselTexts.length;
+                      var carouselTextsIndex = 0;
+                      var carouselTextsInterval = setInterval(function () {
+                        carouselTexts[carouselTextsIndex].classList.remove("carousel-text--active");
+                        carouselTextsIndex = (carouselTextsIndex + 1) % carouselTextsLength;
+                        carouselTexts[carouselTextsIndex].classList.add("carousel-text--active");
+                      }, 8000);
+                    </script>
+                  </div>
+
+                  <img class="banner" src="assets/img/zmoumen3.png" alt="Zakaria Moumen">
                 </div>
+                <div class="contact-info">
+                  <a target="_blank" href="https://www.linkedin.com/in/zakaria-moumen/">
+                    <img src="assets/img/linkedin.svg">
+                  </a>
+                  <a target="_blank" href="mailto:zmoumen@student.1337.ma">
+                    <img src="assets/img/email.svg">
+                  </a>
+                  <a target="_blank" href="https://github.com/k34n4y138">
+                    <img src="assets/img/github.svg">
+                  </a>
+                </div>
+                <img class="scroll-gif" src="assets/img/scroll.gif">
               </div>
             </li>
-            <li class="l-section section">
+            <li class="l-section section ">
               <div class="about">
                 <div>
                   About
@@ -53,23 +90,57 @@
 
               </div>
             </li>
-            <li class="l-section section">
+            <li id="video-backgrounded" class="l-section section">
+              <div class="video-background--overlay"></div>
+              <script>
+                // Function to check if the element has the required class
+                function checkVideoBackground() {
+                  const videoBackground = document.getElementById('video-backgrounded');
+                  
+                  // Check if the element has the necessary class
+                  if (videoBackground.classList.contains('section--is-active')) {
+                    // Create the video element
+                    const videoElement = document.createElement('video');
+                    videoElement.className = 'video-background';
+                    videoElement.autoplay = true;
+                    videoElement.loop = true;
+                    videoElement.muted = true;
+                    videoElement.playsInline = true;
+                    
+                    // Create source element for the video
+                    const sourceElement = document.createElement('source');
+                    sourceElement.src = 'assets/img/video-compressed.mp4';
+                    sourceElement.type = 'video/mp4';
+                    
+                    // Append source to video element
+                    videoElement.appendChild(sourceElement);
+                    
+                    // Append video element to the parent element
+                    videoBackground.appendChild(videoElement);
+                  } else {
+                    // If the class is not present, wait and check again after a short delay
+                    setTimeout(checkVideoBackground, 1000); // Adjust the delay time if necessary
+                  }
+                }
+                // Call the function initially
+                checkVideoBackground();
+              </script>
               <div class="education">
-                <div >
+                <div>
                   Education
                 </div>
               </div>
             </li>
             <li class="l-section section">
               <div class="skills">
-                <div >
+                <div>
                   Skills
                 </div>
               </div>
             </li>
             <li class="l-section section">
               <div class="contact">
-                <div >
+                <div>
                   Contact
                 </div>
               </div>
@@ -84,4 +155,5 @@
   <script src="assets/js/vendor/hammer-2.0.8.js"></script>
   <script src="assets/js/functions.js"></script>
 </body>
+
 </html>

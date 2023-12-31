@@ -286,6 +286,10 @@ body {
   overflow: hidden;
 }
 
+html {
+  height: 100%;
+}
+
 .l-wrapper {
   position: relative;
   width: 1440px;
@@ -366,7 +370,7 @@ body {
   font-weight: 700;
   text-align: center;
 }
-@media (max-width: 380px) {
+@media (max-width: 359px) {
   .device-notification {
     display: flex;
   }
@@ -489,11 +493,104 @@ body {
   position: relative;
   display: flex;
   max-width: 75%;
+  width: 700px;
   height: 100%;
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
-  background: cyan;
+}
+@media (max-width: 768px) {
+  .hero {
+    max-width: 100%;
+  }
+}
+.hero--content {
+  position: relative;
+  height: 200px;
+  width: 100%;
+}
+@media (max-width: 480px) {
+  .hero--content {
+    height: 450px;
+  }
+}
+.hero--content:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #282828;
+}
+.hero--content:after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 20px;
+  width: 30px;
+  height: 5px;
+  background: #849E91;
+}
+.hero--content h1 {
+  max-width: 50px;
+  font-weight: 900;
+  font-size: 3rem;
+  line-height: 1;
+  margin: 0;
+}
+.hero--content h4 {
+  margin: 0;
+  font-weight: 100;
+  font-size: 1.5rem;
+}
+.hero--content .banner {
+  position: absolute;
+  bottom: 2px;
+  height: 500px;
+  right: 0;
+}
+@media (max-width: 800px) or (max-height: 800px) {
+  .hero--content .banner {
+    height: 300px;
+  }
+}
+.hero .scroll-gif {
+  position: fixed;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-height: 80px;
+}
+.hero .contact-info {
+  width: 100%;
+  margin-top: 5px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.hero .contact-info img {
+  height: 40px;
+  width: 40px;
+  filter: invert(62%) sepia(16%) saturate(309%) hue-rotate(98deg) brightness(94%) contrast(91%);
+}
+
+.carousel-text {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  width: auto;
+}
+.carousel-text--active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease-in, transform 0.6s ease-in;
+  animation-delay: 0.3s;
 }
 
 .about {
@@ -516,7 +613,26 @@ body {
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  background: blue;
+}
+
+.video-background {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+.video-background--overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0, 17, 25, 0.88) 0%, rgb(0, 17, 25) 50%);
+  z-index: 1;
 }
 
 .skills {
