@@ -27,13 +27,13 @@
               <p>ZMOUMEN</p>
             </a>
           </header>
-          <nav class="l-side-nav">
+          <nav class="l-side-nav" style="display: none;">
             <ul class="side-nav">
               <li class="is-active"><span>Home</span></li>
-              <!-- <li><span>About</span></li>
-              <li><span>Education</span></li>
-              <li><span>Skills</span></li>
-              <li><span>Contact</span></li> -->
+              <!-- <li><span>About</span></li> -->
+              <!-- <li><span>Education</span></li> -->
+              <!-- <li><span>Skills</span></li> -->
+              <!-- <li><span>Contact</span></li> -->
             </ul>
           </nav>
           <ul class="l-main-content main-content">
@@ -45,14 +45,11 @@
                     <h4 class="carousel-text carousel-text--active">Backend Developper</h4>
                     <h4 class="carousel-text">Python Programmer</h4>
                     <h4 class="carousel-text">Django Developper</h4>
+                    <h4 class="carousel-text">C++ Programmer</h4>
                     <h4 class="carousel-text">Java Programmer</h4>
                     <h4 class="carousel-text">Springboot Developper</h4>
-                    <h4 class="carousel-text">Rust Programmer</h4>
-                    <h4 class="carousel-text">C++ Programmer</h4>
-                    <h4 class="carousel-text">Cloud Practitioner</h4>
-                    <h4 class="carousel-text">Linux Administrator</h4>
-                    <h4 class="carousel-text">Deployment Specialist</h4>
-                    <h4 class="carousel-text">kubernetes Administrator</h4>
+                    <h4 class="carousel-text">APIs 
+                    <h4 class="carousel-text">System Administrator</h4>
                     <script>
                       var carouselTexts = document.getElementsByClassName("carousel-text");
                       var carouselTextsLength = carouselTexts.length;
@@ -78,7 +75,11 @@
                     <img src="assets/img/github.svg">
                   </a>
                 </div>
-                <img class="scroll-gif" src="assets/img/scroll.gif">
+                <p
+                  style="position: absolute;bottom: 0;/*! right: 10px; */width: 100%;text-align: center;color: grey;opacity: 0.3;">
+                  full website coming soon
+                </p>
+                <!-- <img class="scroll-gif" src="assets/img/scroll.gif"> -->
               </div>
             </li>
             <li class="l-section section ">
@@ -90,12 +91,17 @@
               </div>
             </li>
             <li id="video-backgrounded" class="l-section section">
+              <div class="education">
+                <div>
+                  Education
+                </div>
+              </div>
               <div class="video-background--overlay"></div>
               <script>
                 // Function to check if the element has the required class
                 function checkVideoBackground() {
                   const videoBackground = document.getElementById('video-backgrounded');
-                  
+
                   // Check if the element has the necessary class
                   if (videoBackground.classList.contains('section--is-active')) {
                     // Create the video element
@@ -105,15 +111,15 @@
                     videoElement.loop = true;
                     videoElement.muted = true;
                     videoElement.playsInline = true;
-                    
+
                     // Create source element for the video
                     const sourceElement = document.createElement('source');
                     sourceElement.src = 'assets/img/video-compressed.mp4';
                     sourceElement.type = 'video/mp4';
-                    
+
                     // Append source to video element
                     videoElement.appendChild(sourceElement);
-                    
+
                     // Append video element to the parent element
                     videoBackground.appendChild(videoElement);
                   } else {
@@ -124,11 +130,6 @@
                 // Call the function initially
                 checkVideoBackground();
               </script>
-              <div class="education">
-                <div>
-                  Education
-                </div>
-              </div>
             </li>
             <li class="l-section section">
               <div class="skills">
